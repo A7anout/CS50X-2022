@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4" src="/static/Harvard-Logo.png" alt="" width="72" height="57">
+    <h1 class="display-5 fw-bold">Welcome {{ username }}</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Something on your mind? Type it.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button type="button" class="btn btn-primary btn-lg px-4 gap-3" onclick="location.href = '/add'">Add event</button>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,9 @@
+ask the user for the height (n)
+
+making a loop for the rows (i)
+
+repetaing the loop of the rows using another loop for the columns (j)
+
+if i+j >= n-1 thats a #
+
+else "space"

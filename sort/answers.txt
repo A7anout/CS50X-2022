@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: It took sort1 the longest to sort the reversed text. So it makes sense because a number like 0 or 50000 will have to move 50000 (n) times
+
+sort2 uses: merge sort
+
+How do you know?: It took sort2 the lowest to sort the sorted text.
+
+sort3 uses: selection sort
+
+How do you know?: It is the only left sort.

@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My list
+{% endblock %}
+
+{% block main %}
+
+<table class="table" id="myTable">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Description</th>
+        <th scope="col">Due</th>
+        <th scope="col">Importance</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      {% for list in lists %}
+      <tr>
+        <th scope="row", class="counterCell"></th>
+        <td>{{ list["description"] }}</td>
+        <td>{{ list["due"] }}</td>
+        <td>{{ list["importance"] }}</td>
+        <td>
+          <form action="/list" method="post">
+            <input name="idd" type="hidden" value="{{ list.id }}">
+            <input class="btn btn-primary" type="submit" value="delete">
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <script>
+    function deleteRow(r) {
+    var i = r.parentNode.parentNode.rowIndex;
+    document.getElementById("myTable").deleteRow(i);
+}
+  </script>
+
+{% endblock %}

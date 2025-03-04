@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+
+<div class="section">
+
+    <h2>My History</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Status</th>
+                <th>Price</th>
+                <th>Shares</th>
+                <th>date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in stocks %}
+            <tr>
+                <td>{{ stock["symbol"] }}</td>
+                <td>{{ stock["status"] }}</td>
+                <td>{{ usd(stock["price"]) }}</td>
+                <td>{{ stock["shares"] }}</td>
+                <td>{{ stock["date"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

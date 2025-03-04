@@ -1,0 +1,18 @@
+load (line 37)
+    open dictionary file
+        use fopen
+        remember to check if that file is NULL
+    read string from file
+        fscanf(file , "%s" , word)
+        fscanf will return FOF at the end of the file
+    create a new node
+        use malloc
+        remember to check if return is NULL
+        copy word into node using strcpy
+    hash word
+        use the hash function
+        function takes a string and returns an index
+    insert node into hash table
+        hash table is an array of linked lists
+        be sure to set pointers in the correct order
+
